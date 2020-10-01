@@ -1,6 +1,9 @@
-header {
+.title {
     text-align: center;
 }
+
+
+
 body {
     background-color: royalblue;
     flex-direction: column;
@@ -9,12 +12,18 @@ body {
 
 
 img {
-    width: 10%;
+    
+    width: 40%;
 }
 
 .journal__box {
     display: flex;
     background-color: slategrey;
     border: 1px dotted red;
+    align-items: baseline;
+}
+
+footer {
+    display: flex;
     align-items: baseline;
 }
