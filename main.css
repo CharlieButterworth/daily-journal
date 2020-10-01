@@ -2,28 +2,46 @@
     text-align: center;
 }
 
-
-
 body {
-    background-color: royalblue;
+    background-color: salmon;
     flex-direction: column;
+    font-family: fantasy;
 }
-
 
 
 img {
+    display: flex;
+    margin: 0;
+    align-content: center;
+    width: 80%;
+    height: 20em
     
-    width: 40%;
 }
+
+
 
 .journal__box {
     display: flex;
+    text-align: center;
     background-color: slategrey;
     border: 1px dotted red;
     align-items: baseline;
+    padding-top: 3em;
+}
+
+.old__entries {
+    padding-top: 4em;
+    display: flex;
+    border: black;
+}
+
+.journal__text{
+    flex-grow: column wrap;
+    text-align: center;
 }
 
 footer {
+    padding-top: 7em;
     display: flex;
     align-items: baseline;
 }
