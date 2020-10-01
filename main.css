@@ -8,19 +8,27 @@ body {
     font-family: fantasy;
 }
 
+header {
+background-image: url(https://images.squarespace-cdn.com/content/v1/56c8cc2240261dffb291d622/1570736888826-CSOMVEV5BGFW3K0AC720/ke17ZwdGBToddI8pDm48kNiEM88mrzHRsd1mQ3bxVct7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0s0XaMNjCqAzRibjnE_wBlkZ2axuMlPfqFLWy-3Tjp4nKScCHg1XF4aLsQJlo6oYbA/how-journaling-helped-mental-health-sarica-studio);
+    padding-bottom: 5em;
+}
+
+
+
+
 h1 {
+    color: black;
     text-align: center;
 }
 
-img {
+/* img {
     display: flex;
     margin: 0;
     align-content: center;
     width: 100%;
     height: 20em
     
-}
-
+} */
 
 
 .journal__box {
