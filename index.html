@@ -7,61 +7,50 @@
     <title>Daily Journal</title>
 </head>
 <body>
+    <h2>Daily Journal</h2>
+    <form action="">
+
+        <!-- This is for the date -->
+        <fieldset class="journal">
+            <label for="journalDate">Date of Entry</label>
+            <input type="date" name="journalDate" id="journalDate">
+        </fieldset>
+    </form>
+
+    <!-- Concepts Covered -->
+<fieldset class="journal">
+    <label for="conceptsCovered">Concepts Covered</label>
+            <input type="text" name="conceptsCovered" id="conceptsCovered">
+</fieldset>
+
+<!-- Journal Entry -->
+<fieldset class="journal">
+    <label for="Journal Entry">Journal Entry</label>
+    <textarea name="Journal Entry" placeholder="Journal Entry Here" id="Journal" cols="30" rows="10"></textarea>
+                 
+</fieldset>
+
+<!-- Mood Selector -->
+<fieldset class="journal">
+<label for="mood">Mood for the day</label>
+    <select name="mood" id="mood">
+  <option value="Sad">Sad</option>
+  <option value="Happy">Happy</option>
+  <option value="I have no idea">I have no idea</option>
+  <option value="Ehhh">Ehhhh</option>
+</select>
+
+<!-- <button value="Record Journal Entry">Record Journal Entry</button> -->
+</fieldset>
+</select>
+
+<button value="Record Journal Entry">Record Journal Entry</button>
     <main>
-    
-        <header>
-            <h1>Charlie's Daily Journal</h1>
-        </header>
 
-        <!-- Journal Input Section -->
-
-<h3>Daily Journal</h3>
-<div class="journal__box">
-        <section class=journal__entry>
-            <form action="journal">
-                <input type="date">
-            </form>
-    
-
-<div class="journal__text">
-               <!-- <label for="Text Box">Journal Entry</label> -->
-                <textarea name="Journal Entry" placeholder="Journal Entry Here" id="Journal" cols="30" rows="10"></textarea>
-                <input type="submit" value="submit">
-</div>
-            <div>
-                <input type="radio" id="Fully Stoked" name="Drinking Through a Fire Hose" value="Waving White Flag">
-                <label for="Fully Stocked">Fully Stoked</label>
-                <input type="radio" id="Fully Stoked" name="Drinking Through a Fire Hose" value="Waving White Flag">
-                <label for="ehh made it through the day">Ehh made it through the day</label>
-                <input type="radio" id="Fully Stoked" name="Drinking Through a Fire Hose" value="Waving White Flag">
-                <label for="Drinking Through a Fire Hose">Drinking Through a Fire Hose</label>
-                <input type="radio" id="Fully Stoked" name="Ehh made it through the day" value="Drinking Through a Fire Hose" value="Waving White Flag">
-                <label for="Waving White Flag">Waving White Flag</label>
-                </div>
-
-</div>
-            </form>
-            </section>
-</div>
-
-
-<!-- Old Journal Entries -->
-<section class="old__entries">
-    <h5>Recent Entries</h5>
-    <ol>
-        <li>Entry <button type="button">Delete</button><button type="button">Edit</button></li>
-        <li>Entry <button type="button">Delete</button><button type="button">Edit</button></li>
-        <li>Entry <button type="button">Delete</button><button type="button">Edit</button></li>
-    </ol>
-
-
-</section>
-
-
-<!-- Name/GitHub account -->
+<!-- Name/GitHub account
 <footer>
     Created by: Charlie Butterworth -- https://github.com/CharlieButterworth
-</footer>
+</footer> -->
 
 
 
@@ -79,5 +68,6 @@
 
 
     </main>
+    <script type="module" src="./scripts/main.js>
 </body>
-</html>
+</html> -->
