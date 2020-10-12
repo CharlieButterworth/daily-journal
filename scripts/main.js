@@ -1,3 +1,6 @@
-const { JournalEntryComponent } = require("./JournalEntry");
 
-JournalEntryComponent()
+
+import { EntryListComponent } from "./JournalEntryList.js";
+
+
+EntryListComponent()
