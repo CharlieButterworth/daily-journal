@@ -7,6 +7,11 @@
 import { useJournalEntries } from "./JournalDataProvider.js"
 import { JournalEntryComponent } from "./JournalEntry.js"
 
+const eventHub = document.querySelector(".container")
+
+eventHub.addEventListener("entryStateChanged", () => {
+    EntryListComponent()
+})
 // DOM reference to where all entries will be rendered
 const entryLog = document.querySelector("#entryLog")
 

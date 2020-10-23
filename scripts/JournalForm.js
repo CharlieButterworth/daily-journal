@@ -2,8 +2,9 @@
 // add a click event for when user clicks the submit button
 // submit should grab values from form inputs, build new note object, and POST that note to the API
 
-import { saveEntry } from "./JournalDataProvider.js"
-import { saveNote } from "./NotesProvider.js"
+import { journalEntries, saveEntry } from "./JournalDataProvider.js"
+import { JournalEntryComponent } from "./JournalEntry.js"
+
 
 
 
@@ -11,22 +12,26 @@ import { saveNote } from "./NotesProvider.js"
 const contentTarget = document.querySelector(".journalEntry--container")
 const eventHub = document.querySelector(".container")
 
+
+// Has to be something here
 const render = () => {
+    
     contentTarget.innerHTML = `
-        <input id="entry--date" type="date"/>
-        <input id="entry--mood" type="text" placeholder="Your Name Here"/>
-        <input id="entry--concept" type="text" placeholder="Suspect Name"/>
-        <textarea id="entry--entry" placeholder="Your Note Here"></textarea>
-        <button id="saveNote">Save Note</button>
-    `
-}
+    <section id="entry---" class="journalEntry">
+    <p id="entry--concept" class="journalEntry">${entry.concept}</p>
+    <p id="entry--entry" class="journalEntry">${entry.entry}</p>
+    <p id="entry--date" class="journalEntry">${entry.date}</p>
+    <p id="entry--mood" class="journalEntry">${entry.mood}</p>
+    </section>
+`
+
 
 eventHub.addEventListener("click", clickEvent => {
-    if(clickEvent.target.id === "saveNote") {
-        const date = document.querySelector("#entry--date")
-        const entry = document.querySelector("#entry--mood")
-        const mood = document.querySelector("#entry--concept")
-        const concept = document.querySelector("#entry--entry")
+    if(clickEvent.target.id === "journalButton") {
+        const date = document.querySelector("#entry--date").value
+        const entry = document.querySelector("#entry--mood").value
+        const mood = document.querySelector("#entry--concept").value
+        const concept = document.querySelector("#entry--entry").value
         
 
         // new object here
@@ -41,5 +46,12 @@ eventHub.addEventListener("click", clickEvent => {
         saveEntry(newEntry)
     }
 }
-
 )
+console.log(newEntry)
+
+    
+export const journalForm () => {
+    render()
+
+}
+}

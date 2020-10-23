@@ -7,22 +7,20 @@
  */
 
 // This is the original data.
-const journal = [
-    // {
-    //     id: 1,
-    //     date: "07/24/2025",
-    //     concept: "HTML & CSS",
-    //     entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-    //     mood: "Ok"
-    // },
-    // {
-    //     id: 2,
-    //     date: "09/28/2020",
-    //     concept: "First Day",
-    //     entry: "We talked about all the great things happening at NSS. We also got to know our instructors.",
-    //     mood: "Ok"
-    // }
-]
+
+
+const eventHub = document.querySelector(".container")
+
+const dispatchStateChangeEvent = () => {
+    const entryStateChangedEvent = new CustomEvent("entryStateChanged", {
+        detail: {
+            content: null
+        }
+    })
+    eventHub.dispatchEvent(entryStateChangedEvent)
+}
+const journal = []
+
 
 /*
     You export a function that provides a version of the
@@ -52,6 +50,8 @@ export const journalEntries = () => {
 }
 
 console.log('JOURNAL ENTRY', journalEntries)
+
+
 export const saveEntry = (entry) => {
     return fetch('http://localhost:8088/notes', {
         method: "POST",
