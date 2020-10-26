@@ -19,6 +19,10 @@ const dispatchStateChangeEvent = () => {
     })
     eventHub.dispatchEvent(entryStateChangedEvent)
 }
+
+
+
+
 const journal = []
 
 
@@ -33,6 +37,12 @@ export const useJournalEntries = () => {
     return sortedByDate
 }
 
+
+
+
+
+
+
 let journalEntry = []
 
 export const getEntries = () => {
@@ -45,11 +55,20 @@ export const getEntries = () => {
         })
 }
 
+
+
+
+
 export const journalEntries = () => {
     return journalEntry.slice()
 }
 
 console.log('JOURNAL ENTRY', journalEntries)
+
+
+
+
+
 
 
 export const saveEntry = (entry) => {

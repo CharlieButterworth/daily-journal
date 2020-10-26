@@ -6,7 +6,7 @@ import { journalEntries, saveEntry } from "./JournalDataProvider.js"
 import { JournalEntryComponent } from "./JournalEntry.js"
 
 
-
+JournalEntryComponent()
 
 
 const contentTarget = document.querySelector(".journalEntry--container")
@@ -14,14 +14,14 @@ const eventHub = document.querySelector(".container")
 
 
 // Has to be something here
-const render = () => {
-    
+const render = (entryObj) => {
     contentTarget.innerHTML = `
     <section id="entry---" class="journalEntry">
-    <p id="entry--concept" class="journalEntry">${entry.concept}</p>
-    <p id="entry--entry" class="journalEntry">${entry.entry}</p>
-    <p id="entry--date" class="journalEntry">${entry.date}</p>
-    <p id="entry--mood" class="journalEntry">${entry.mood}</p>
+    <p id="entry--entry" class="journalEntry">${entryObj.entry}</p>
+    <p id="entry--concept" class="journalEntry">${entryObj.concept}</p>
+    <p id="entry--entry" class="journalEntry">${entryObj.entry}</p>
+    <p id="entry--date" class="journalEntry">${entryObj.date}</p>
+    <p id="entry--mood" class="journalEntry">${entryObj.mood}</p>
     </section>
 `
 
@@ -47,11 +47,11 @@ eventHub.addEventListener("click", clickEvent => {
     }
 }
 )
-console.log(newEntry)
-
-    
-export const journalForm () => {
-    render()
+// console.log(newEntry)
 
 }
+export const JournalForm = () => {
+    render()
+
+
 }
