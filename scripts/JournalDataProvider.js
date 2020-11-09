@@ -14,7 +14,7 @@ const eventHub = document.querySelector(".container")
 const dispatchStateChangeEvent = () => {
     const entryStateChangedEvent = new CustomEvent("entryStateChanged", {
         detail: {
-            content: null
+            content: content
         }
     })
     eventHub.dispatchEvent(entryStateChangedEvent)
