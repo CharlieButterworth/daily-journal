@@ -52,6 +52,7 @@ export const getEntries = () => {
         .then(parsedEntries => {
                 journalEntry = parsedEntries
             // What should happen when we finally have the array?
+           
         })
 }
 
@@ -63,7 +64,6 @@ export const journalEntries = () => {
     return journalEntry.slice()
 }
 
-console.log('JOURNAL ENTRY', journalEntries)
 
 
 
@@ -72,7 +72,7 @@ console.log('JOURNAL ENTRY', journalEntries)
 
 
 export const saveEntry = (entry) => {
-    return fetch('http://localhost:8088/notes', {
+    return fetch("http://localhost:8088/entries", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -83,4 +83,4 @@ export const saveEntry = (entry) => {
     .then(dispatchStateChangeEvent)
 }
 
-console.log('here is the entry', getEntries)
+console.log('here is the entry', saveEntry)
